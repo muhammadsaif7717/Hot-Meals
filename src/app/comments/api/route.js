@@ -1,12 +1,14 @@
 //Getting API
 export async function GET() {
-    return Response.json({
-        comments
+    return Response.json(comments, {
+        headers: {
+            "Set-Cookie": "theme=dark"
+        }
     })
 }
 
 //posting API
-export async function POST({ request }) {
+export async function POST(request) {
     const newComment = await request.json()
     comments.push({
         id: comments.length + 1,

@@ -8,7 +8,7 @@ const page = () => {
             <div className='grid grid-cols-3 gap-5'>
                 {
                     [1, 2, 3, 4, 5, 6, 7]?.map(img => 
-                        <img key={img} src={`/images/${img}.jpg`} alt='image' width={1080} height={1920} />
+                        <Image key={img} src={`/images/${img}.jpg`} alt='image' width={1080} height={1920} />
                     )
                 }
 
